@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
+	<script src="./index.js"></script>
+	<title>Weird State Laws</title>
+</head>
+<body>
+	<section class="hero is-light">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title">
+					Weird laws of American States
+				</h1>
+				<h2 class="subtitle">
+					The process of creating, implementing, or removing a law is complicated, and many of our laws reflect that red tape.
+				</h2>
+			</div>
+		</div>
+	</section>
+	<br><br>
+	
+	<div class="field">
+		<div class="control">
+			<div class="select is-info" style="margin-left: 50px">
+				<select onchange="updateState()" id="state-list">
+					<optgroup label="States">
+					</optgroup>
+				</select>
+			</div>
+		</div>
+	</div>
+	<br><br>
+	
+	<article class="media" style="margin-left: 50px;">
+		<figure class="media-left">
+			<p class="image is-128x128">
+				<img id="flag-image" src="./assets/usa-flag-small.png">
+			</p>
+		</figure>
+		<div class="media-content">
+			<div class="content">
+				<p id="state-name" style="font-weight: bold;">
+					The United States of America 
+				</p>
+				<p id="law-text">
+					Please select a state to see a weird law.
+				</p>
+				<p id="source" style="color:darkgray;">
+					
+				</p>
+			</div>
+			<nav class="level is-mobile">
+				<div class="level-left">
+					<a class="level-item">
+						<span class="icon is-small"><i class="fas fa-reply"></i></span>
+					</a>
+					<a class="level-item">
+						<span class="icon is-small"><i class="fas fa-retweet"></i></span>
+					</a>
+					<a class="level-item">
+						<span class="icon is-small"><i class="fas fa-heart"></i></span>
+					</a>
+				</div>
+			</nav>
+		</div>
+	</article>
+	<br><br><br><br><br><br><br>
+	<footer class="footer">
+		<div class="content has-text-centered">
+			<p>
+				<strong>
+				<a id="source-text" href="https://jgthms.com">Source</a>
+				</strong> 
+				for this weird <span id="source-state">state</span> law.
+			</p>
+		</div>
+	</footer>
+</body>
+</html>
